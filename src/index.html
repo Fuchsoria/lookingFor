@@ -34,62 +34,165 @@
         </h2>
       </div>
     </header>
-    <section class="selects">
+    <main class="main">
 
-      <div class="selects__games">
-        <h2 class="selects__games-title">Select your Game</h2>
-        <div class="selects__game-items">
-          <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"></div>
-          <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"></div>
-          <div class="selects__game-item selects__game-item_active"><img src="./assets/images/archeage.png"
-              class="selects__image">
+      <section class="selects">
+
+        <div class="selects__games">
+          <h2 class="selects__games-title">Select your Game</h2>
+          <div class="selects__game-items">
+            <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"
+                alt="archeage"></div>
+            <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"
+                alt="archeage"></div>
+            <div class="selects__game-item selects__game-item_active"><img src="./assets/images/archeage.png"
+                class="selects__image" alt="archeage">
+            </div>
+            <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"
+                alt="archeage"></div>
+            <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"
+                alt="archeage"></div>
           </div>
-          <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"></div>
-          <div class="selects__game-item"><img src="./assets/images/archeage.png" class="selects__image"></div>
         </div>
-      </div>
-      <div class="selects__looking">
-        <h2 class="selects__items-title">Looking For</h2>
-        <div class="selects__items">
-          <div class="selects__item selects__item_active">Group</div>
-          <div class="selects__item">Guild</div>
-          <div class="selects__item selects__item_long">Group Members</div>
-          <div class="selects__item selects__item_long">Guild Members</div>
+        <div class="selects__looking">
+          <h2 class="selects__items-title">Looking For</h2>
+          <div class="selects__items">
+            <div class="selects__item selects__item_active">Group</div>
+            <div class="selects__item">Guild</div>
+            <div class="selects__item selects__item_long">Group Members</div>
+            <div class="selects__item selects__item_long">Guild Members</div>
+          </div>
         </div>
+      </section>
+      <section class="filters">
+        <form class="filters__form">
+          <label class="filters__label">
+            <h6 class="filters__title">Platform</h6>
+            <select class="filters__select" name="platform" id="platform">
+              <option class="filters__option" value="any">Any Platform</option>
+              <option class="filters__option" value="pc">PC</option>
+              <option class="filters__option" value="ps">Play Station</option>
+              <option class="filters__option" value="xbox">XBox</option>
+            </select>
+          </label>
+          <label class="filters__label">
+            <h6 class="filters__title">Region</h6>
+            <select class="filters__select" name="region" id="region">
+              <option class="filters__option" value="any">Any Region</option>
+              <option class="filters__option" value="europe">Europe</option>
+              <option class="filters__option" value="asia">Asia</option>
+              <option class="filters__option" value="russia">Russia</option>
+              <option class="filters__option" value="america">America</option>
+            </select>
+          </label>
+          <label class="filters__label">
+            <h6 class="filters__title">Voice</h6>
+            <select class="filters__select" name="voice" id="voice">
+              <option class="filters__option" value="any">Any Voice</option>
+              <option class="filters__option" value="ingame">In-Game party</option>
+              <option class="filters__option" value="discord">Discord</option>
+            </select>
+          </label>
+        </form>
+      </section>
+      <section class="cards">
+        <div class="card">
+          <div class="card__header">
+            <div class="card__info">
+              <div class="card__rating-container">
+                <h6 class="card__rating">8.7</h6>
+              </div>
+              <h4 class="card__nickname">NickName</h4>
+            </div>
+            <div class="card__badges">
+              <div class="card__badge card__badge_eng"></div>
+              <div class="card__badge card__badge_discord"></div>
+            </div>
+          </div>
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam atque a cum magni esse ipsum vel obcaecati
+            iure eius ex, consequuntur fugiat sed distinctio earum magnam provident est. Maxime eius amet cum tempore.
+            Totam quia excepturi tenetur vel ullam eos quae aliquam quam, explicabo porro a, ipsum officiis et
+            inventore!
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__info">
+              <div class="card__rating-container">
+                <h6 class="card__rating">8.7</h6>
+              </div>
+              <h4 class="card__nickname">NickName</h4>
+            </div>
+            <div class="card__badges">
+              <div class="card__badge card__badge_eng"></div>
+              <div class="card__badge card__badge_discord"></div>
+            </div>
+          </div>
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam atque a cum magni esse ipsum vel obcaecati
+            iure eius ex, consequuntur fugiat sed distinctio earum magnam provident est. Maxime eius amet cum tempore.
+            Totam quia excepturi tenetur vel ullam eos quae aliquam quam, explicabo porro a, ipsum officiis et
+            inventore!
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__info">
+              <div class="card__rating-container">
+                <h6 class="card__rating">8.7</h6>
+              </div>
+              <h4 class="card__nickname">NickName</h4>
+            </div>
+            <div class="card__badges">
+              <div class="card__badge card__badge_eng"></div>
+              <div class="card__badge card__badge_discord"></div>
+            </div>
+          </div>
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam atque a cum magni esse ipsum vel obcaecati
+            iure eius ex, consequuntur fugiat sed distinctio earum magnam provident est. Maxime eius amet cum tempore.
+            Totam quia excepturi tenetur vel ullam eos quae aliquam quam, explicabo porro a, ipsum officiis et
+            inventore!
+          </p>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <div class="card__info">
+              <div class="card__rating-container">
+                <h6 class="card__rating">8.7</h6>
+              </div>
+              <h4 class="card__nickname">NickName</h4>
+            </div>
+            <div class="card__badges">
+              <div class="card__badge card__badge_eng"></div>
+              <div class="card__badge card__badge_discord"></div>
+            </div>
+          </div>
+          <p class="card__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam atque a cum magni esse ipsum vel obcaecati
+            iure eius ex, consequuntur fugiat sed distinctio earum magnam provident est. Maxime eius amet cum tempore.
+            Totam quia excepturi tenetur vel ullam eos quae aliquam quam, explicabo porro a, ipsum officiis et
+            inventore!
+          </p>
+        </div>
+      </section>
+      <section class="pagination">
+        <div class="pagination__item">«</div>
+        <div class="pagination__item">1</div>
+        <div class="pagination__item">2</div>
+        <div class="pagination__item pagination__item_current">3</div>
+        <div class="pagination__item">4</div>
+        <div class="pagination__item">5</div>
+        <div class="pagination__item">»</div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer_container">
+        <a href="#" class="footer__logo">LookingFor</a>
+        <a href="#" class="footer__copyright">LookingFor © 2019 All rights reserved</a>
       </div>
-    </section>
-    <section class="filters">
-      <form class="filters__form">
-        <label class="filters__label">
-          <h6 class="filters__title">Platform</h6>
-          <select class="filters__select" name="platform" id="platform">
-            <option class="filters__option" value="any">Any Platform</option>
-            <option class="filters__option" value="pc">PC</option>
-            <option class="filters__option" value="ps">Play Station</option>
-            <option class="filters__option" value="xbox">XBox</option>
-          </select>
-        </label>
-        <label class="filters__label">
-          <h6 class="filters__title">Region</h6>
-          <select class="filters__select" name="region" id="region">
-            <option class="filters__option" value="any">Any Region</option>
-            <option class="filters__option" value="europe">Europe</option>
-            <option class="filters__option" value="asia">Asia</option>
-            <option class="filters__option" value="russia">Russia</option>
-            <option class="filters__option" value="america">America</option>
-          </select>
-        </label>
-        <label class="filters__label">
-          <h6 class="filters__title">Voice</h6>
-          <select class="filters__select" name="voice" id="voice">
-            <option class="filters__option" value="any">Any Voice</option>
-            <option class="filters__option" value="pc">PC</option>
-            <option class="filters__option" value="ps">Play Station</option>
-            <option class="filters__option" value="xbox">XBox</option>
-          </select>
-        </label>
-      </form>
-    </section>
+    </footer>
   </div>
   <script src="./assets/scripts/index.js"></script>
 </body>
