@@ -75,7 +75,7 @@ body {
       background-color: $secondColor;
     }
 
-    &_active {
+    &_current {
       background-color: $secondColor;
     }
   }
@@ -162,7 +162,7 @@ body {
       opacity: 1;
     }
 
-    &_active {
+    &_current {
       opacity: 1;
     }
   }
@@ -217,7 +217,7 @@ body {
       opacity: 1;
     }
 
-    &_active {
+    &_current {
       opacity: 1;
     }
   }
@@ -236,27 +236,46 @@ body {
     height: 75px;
     display: flex;
     align-items: center;
+
+    &_column {
+      padding: 0;
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   &__label {
     margin-right: 15px;
-    position: relative;
-
-    &:after {
-      font-size: 12px;
-      content: "▼";
-      position: absolute;
-      color: white;
-      right: 7px;
-      bottom: 7px;
-      z-index: 1;
-      text-align: center;
-      pointer-events: none;
-    }
 
     &:last-child {
       margin-right: 0;
     }
+
+    &_arrow {
+      position: relative;
+
+      &:after {
+        font-size: 12px;
+        content: "▼";
+        position: absolute;
+        color: white;
+        right: 7px;
+        bottom: 7px;
+        z-index: 1;
+        text-align: center;
+        pointer-events: none;
+      }
+    }
+
+    &_clear {
+      margin-right: 0;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   &__select {
@@ -277,6 +296,10 @@ body {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 5px;
     cursor: pointer;
+
+    &_long {
+      width: 350px;
+    }
 
     &:focus {
       outline: 1px solid white;
@@ -301,6 +324,55 @@ body {
     line-height: 15px;
     color: $textColor;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    &_newcard {
+      font-size: 20px;
+      line-height: 24px;
+      color: $textColor;
+      margin-bottom: 5px;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__textarea {
+    width: 350px;
+    min-height: 120px;
+    font-family: Montserrat;
+    background: $secondColor;
+    color: $textColor;
+    border: 1px solid #A5B1C2;
+    box-sizing: border-box;
+    padding: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    &::placeholder {
+      color: $textColor;
+    }
+  }
+
+  &__button {
+    font-family: "Montserrat", sans-serif;
+    width: 350px;
+    height: 30px;
+    background-color: $secondColor;
+    border: 1px solid #A5B1C2;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $textColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: #778CA3;
+    }
   }
 
 }
@@ -380,6 +452,10 @@ body {
   &__badges {
     padding: 10px;
     display: flex;
+
+    &_no-padding {
+      padding: 0;
+    }
   }
 
   &__badge {
@@ -391,6 +467,10 @@ body {
     background-size: cover;
     background-position: center;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    &:first-child {
+      margin-left: 0;
+    }
 
     &_eng {
       background-image: url(../images/flag-en.jpg);
@@ -479,5 +559,209 @@ body {
     &:hover {
       opacity: 0.5;
     }
+  }
+}
+
+
+.static {
+  margin: 50px auto 50px auto;
+  max-width: 920px;
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: $secondColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &__content {
+    background: $mainColor;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &__text {
+    padding: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $textColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: $textColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &_opened {
+    display: flex;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 410px;
+    padding: 30px;
+    background: $mainColor;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.profile {
+  max-width: 920px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  &__first {
+    width: 350px;
+  }
+
+  &__second {
+    width: 540px;
+  }
+
+}
+
+.own-profile {
+  box-sizing: border-box;
+  height: auto;
+  background: $mainColor;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+
+  &__container {
+    display: flex;
+  }
+
+  &__nickname {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: $textColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &__rating {
+    margin: 5px 0 5px 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $textColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &__title {
+    margin: 0 0 15px 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: $secondColor;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &__avatar {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 15px;
+    border: 1px solid #A5B1C2;
+    box-sizing: border-box;
+  }
+
+  &__buttons {
+    margin-top: 15px;
+  }
+
+  &__button {
+    font-family: "Montserrat", sans-serif;
+    height: 30px;
+    background-color: $secondColor;
+    border: 1px solid #A5B1C2;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    color: $textColor;
+    transition: background-color 0.5s;
+    padding: 0 10px;
+    margin: 0 10px 0 0;
+
+    &:hover {
+      background-color: $mainColor;
+    }
+  }
+}
+
+.own-cards {
+
+  &__item {
+    background-color: $mainColor;
+    margin-bottom: 5px;
+  }
+
+  &__header {
+    width: 540px;
+    height: 44px;
+    box-sizing: border-box;
+    background: $secondColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  &__triangle {
+    cursor: pointer;
+  }
+
+  &__text {
+    margin: 0 10px;
+    font-weight: 400;
+    height: 17px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 17px;
+    color: $textColor;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  &__menu {
+    padding: 15px;
+    display: none;
+
+    &_opened {
+      display: flex;
+    }
+  }
+
+  &__pagination {
+    margin: 15px 0 0 0;
   }
 }
