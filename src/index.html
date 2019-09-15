@@ -11,19 +11,20 @@
 
 <body>
   <div class="lookingfor">
-    <div class="nav">
+    <nav class="nav">
       <div class="container nav_container">
         <a href="#" class="nav__logo">LookingFor</a>
-        <ul class="nav__bar">
+        <ul class="nav__bar nav__bar_opened">
           <li><a href="./index.html" class="nav__item nav__item_current">Home</a></li>
           <li><a href="./about.html" class="nav__item">About</a></li>
           <li><a href="./newcard.html" class="nav__item">New Card</a></li>
-          <li><a href="./signin.html" class="nav__item">Signin</a></li>
-          <li><a href="./signup.html" class="nav__item">Signup</a></li>
+          <li><a href="#" class="nav__item">Signin</a></li>
+          <li><a href="#" class="nav__item">Signup</a></li>
           <li><a href="./profile.html" class="nav__item">Profile</a></li>
         </ul>
       </div>
-    </div>
+      <img src="./assets/images/menu.svg" alt="menu" class="nav__burger">
+    </nav>
     <header class="header">
       <img src="./assets/images/banner.jpg" alt="Banner" class="header__banner">
       <div class="container header_container">
@@ -68,7 +69,7 @@
       <section class="filters">
         <form class="filters__form">
           <label class="filters__label filters__label_arrow">
-            <h6 class="filters__title">Platform</h6>
+            <div class="filters__title">Platform</div>
             <select class="filters__select" name="platform" id="platform">
               <option class="filters__option" value="any">Any Platform</option>
               <option class="filters__option" value="pc">PC</option>
@@ -77,7 +78,7 @@
             </select>
           </label>
           <label class="filters__label filters__label_arrow">
-            <h6 class="filters__title">Region</h6>
+            <div class="filters__title">Region</div>
             <select class="filters__select" name="region" id="region">
               <option class="filters__option" value="any">Any Region</option>
               <option class="filters__option" value="europe">Europe</option>
@@ -87,7 +88,7 @@
             </select>
           </label>
           <label class="filters__label filters__label_arrow">
-            <h6 class="filters__title">Voice</h6>
+            <div class="filters__title">Voice</div>
             <select class="filters__select" name="voice" id="voice">
               <option class="filters__option" value="any">Any Voice</option>
               <option class="filters__option" value="ingame">In-Game party</option>

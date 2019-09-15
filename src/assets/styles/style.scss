@@ -25,6 +25,7 @@ body {
 }
 
 .nav {
+  position: relative;
   min-height: 70px;
   background: $mainColor;
 
@@ -78,6 +79,17 @@ body {
     &_current {
       background-color: $secondColor;
     }
+  }
+
+  &__burger {
+    display: none;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 15px 10px 15px;
   }
 }
 
@@ -763,5 +775,245 @@ body {
 
   &__pagination {
     margin: 15px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .nav__bar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .header__text {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .selects {
+    margin: 0 auto;
+    max-width: 100%;
+
+    &__games {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+
+    &__game-items {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .filters {
+    max-width: 100%;
+  }
+
+  .cards {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .pagination {
+    max-width: 100%;
+  }
+
+  .static {
+    max-width: 100%;
+  }
+
+  .profile {
+    max-width: 100%;
+  }
+
+  .card {
+    width: 47.5%;
+  }
+
+  .nav__logo {
+    font-size: 40px;
+    line-height: 70px;
+    padding-left: 10px;
+  }
+
+  .footer__logo {
+    font-size: 40px;
+    line-height: 70px;
+    padding-left: 10px;
+  }
+
+  .profile {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .profile__first {
+    width: 100%;
+  }
+
+  .profile__second {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .own-cards__header {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__bar {
+    flex-direction: column;
+    display: none;
+  }
+
+  .nav__bar_opened {
+    display: flex;
+  }
+
+  .nav__burger {
+    display: block;
+  }
+
+  .filters {
+
+    &__form {
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 15px 15px 0 15px;
+    }
+
+    &__label {
+      margin-right: 0;
+      margin-bottom: 15px;
+      width: 47.5%;
+    }
+
+    &__select {
+      width: 100%;
+    }
+
+  }
+
+  .header_container {
+    height: 300px;
+  }
+
+  .header__banner {
+    height: 300px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .footer_container {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    text-align: center;
+  }
+
+  .footer__copyright {
+    margin-top: 15px;
+  }
+
+  .selects__items {
+    width: 100%;
+  }
+
+  .selects__looking {
+    width: 100%;
+  }
+
+  .selects {
+    flex-wrap: wrap;
+
+    &__games {
+      width: 100%;
+    }
+
+    &__game-items {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .filters {
+
+    &__form {
+      height: auto;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 15px 15px 0 15px;
+    }
+
+    &__label {
+      margin-right: 0;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    &__select {
+      width: 100%;
+    }
+  }
+
+  .own-cards__menu {
+    flex-direction: column;
+  }
+
+  .own-profile__button {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .card__header {
+    min-height: 44px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .nav__logo {
+    font-size: 26px;
+  }
+
+  .footer__logo {
+    font-size: 26px;
+  }
+
+  .footer__copyright {
+    font-size: 16px;
+  }
+
+  .header__text {
+    font-size: 26px;
   }
 }

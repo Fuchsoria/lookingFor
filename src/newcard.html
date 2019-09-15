@@ -11,19 +11,20 @@
 
 <body>
   <div class="lookingfor">
-    <div class="nav">
+    <nav class="nav">
       <div class="container nav_container">
         <a href="#" class="nav__logo">LookingFor</a>
         <ul class="nav__bar">
           <li><a href="./index.html" class="nav__item">Home</a></li>
           <li><a href="./about.html" class="nav__item">About</a></li>
           <li><a href="./newcard.html" class="nav__item nav__item_current">New Card</a></li>
-          <li><a href="./signin.html" class="nav__item">Signin</a></li>
-          <li><a href="./signup.html" class="nav__item">Signup</a></li>
+          <li><a href="#" class="nav__item">Signin</a></li>
+          <li><a href="#" class="nav__item">Signup</a></li>
           <li><a href="./profile.html" class="nav__item">Profile</a></li>
         </ul>
       </div>
-    </div>
+      <img src="./assets/images/menu.svg" alt="menu" class="nav__burger">
+    </nav>
     <header class="header">
       <img src="./assets/images/banner.jpg" alt="Banner" class="header__banner">
       <div class="container header_container">
@@ -41,7 +42,7 @@
         <div class="popup__container">
           <form class="filters__form filters__form_column" name="newcard">
             <label class="filters__label filters__label_arrow filters__label_clear">
-              <h6 class="filters__title filters__title_newcard">Select your platform</h6>
+              <div class="filters__title filters__title_newcard">Select your platform</div>
               <select class="filters__select filters__select_long" name="platform" id="platform">
                 <option class="filters__option" value="any">Any Platform</option>
                 <option class="filters__option" value="pc">PC</option>
@@ -50,7 +51,7 @@
               </select>
             </label>
             <label class="filters__label filters__label_arrow filters__label_clear">
-              <h6 class="filters__title filters__title_newcard">Select your region</h6>
+              <div class="filters__title filters__title_newcard">Select your region</div>
               <select class="filters__select filters__select_long" name="region" id="region">
                 <option class="filters__option" value="any">Any Region</option>
                 <option class="filters__option" value="europe">Europe</option>
@@ -60,7 +61,7 @@
               </select>
             </label>
             <label class="filters__label filters__label_arrow filters__label_clear">
-              <h6 class="filters__title filters__title_newcard">Select your voice setups</h6>
+              <div class="filters__title filters__title_newcard">Select your voice setups</div>
               <select class="filters__select filters__select_long" name="voice" id="voice">
                 <option class="filters__option" value="any">Any Voice</option>
                 <option class="filters__option" value="ingame">In-Game party</option>
@@ -68,7 +69,7 @@
               </select>
             </label>
             <label class="filters__label filters__label_clear">
-              <h6 class="filters__title filters__title_newcard">Write your about text</h6>
+              <div class="filters__title filters__title_newcard">Write your about text</div>
               <textarea class="filters__textarea" placeholder="Write your text..."></textarea>
             </label>
             <button type="submit" class="filters__button">Submit</button>
