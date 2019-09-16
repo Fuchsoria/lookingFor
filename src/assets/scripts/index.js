@@ -19,4 +19,41 @@ class Burger {
   }
 }
 
-const mainBurger = new Burger('.nav__burger', '.nav__bar', 'nav__bar_opened');
+new Burger('.nav__burger', '.nav__bar', 'nav__bar_opened');
+
+class Popup {
+  constructor(openButton, popupBlock, openedClass) {
+    this.openButton = document.querySelector(openButton);
+    this.popupBlock = document.querySelector(popupBlock);
+    this.openedClass = openedClass;
+    this.popupOpen = this.popupOpen.bind(this);
+    this.popupClose = this.popupClose.bind(this);
+    this.handler();
+  }
+
+  handler() {
+    this.openButton.addEventListener('click', this.popupOpen);
+  }
+
+  addCloseHandler() {
+    this.popupBlock.addEventListener('click', this.popupClose);
+  }
+
+  removeCloseHandler() {
+    this.popupBlock.removeEventListener('click', this.popupClose);
+  }
+
+  popupOpen() {
+    this.popupBlock.classList.add(this.openedClass);
+    this.addCloseHandler();
+  }
+
+  popupClose(event) {
+    if (event.target.classList.contains('popup')) {
+      this.popupBlock.classList.remove(this.openedClass);
+      this.removeCloseHandler();
+    }
+  }
+}
+
+new Popup('.nav__item_newcard', '.popup_newcard', 'popup_opened');
